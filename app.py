@@ -7,16 +7,16 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
 
-START = "2012-01-01" # start of the data
+START = "2010-01-01" # start of the data
 TODAY = date.today().strftime("%Y-%m-%d") # end of the data
 
 
 st.title("Stock Prediction App")
 
-stocks = ("AAPL","GOOG","MSFT","GME","TCS.NS","RBLX","BTC-USD","SBIN.NS") # Stock Name
+stocks = ("AAPL","GOOG","MSFT","GME","TCS.NS","RBLX","BTC-USD","SBIN.NS","TSLA","DOGE-USD") # Stock Name
 selected_stocks = st.selectbox("Select the stock",stocks)
 
-n_years = st.slider("Years of prediction:",1,8) # years for prediction in the future 1 year to 4 year
+n_years = st.slider("Years of prediction:",1,2) # years for prediction in the future 1 year to 4 year
 
 period = n_years * 365
 
